@@ -25,7 +25,7 @@ public class RecoloringBehavoiur : MonoBehaviour
         _recoloringTime += Time.deltaTime;
         _recoloringSmoothing = _recoloringTime / _recoloringDuration;
         _renderer.material.color = Color.Lerp(_startColor, _endColor, _recoloringSmoothing);
-        if (_recoloringTime >= _recoloringDelay)
+        if (_recoloringTime >= _recoloringDelay + _recoloringDuration)
         {
             GenerateNextColor();
             _recoloringTime = 0f;
